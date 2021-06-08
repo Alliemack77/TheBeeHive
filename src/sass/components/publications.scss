@@ -1,0 +1,43 @@
+@import "../abstracts/mixins";
+@import "../abstracts/variables";
+
+.publications {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 100%;
+  margin: 8em 3em;
+
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    & > * {
+      &:not(:first-child) {
+        margin-top: 3.5em
+      }
+    }
+
+    &-title {
+      text-align: center;
+    }
+  }
+
+  @include h2-landing;
+
+  &__cards {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+  }
+
+  a {
+    margin: 1em;
+  }
+}

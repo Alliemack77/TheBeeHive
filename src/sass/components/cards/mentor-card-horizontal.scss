@@ -1,0 +1,91 @@
+@import '../../abstracts/variables';
+@import '../../base/base';
+
+
+.card-horizontal {
+    margin: 4.5em;
+    padding: 0;
+    // border-radius: 10px;
+    min-width: 375px;
+    display: grid;
+    grid-template-areas:
+            "img"
+            "body";
+    justify-items: center;
+    overflow: hidden;
+
+
+    &__body {
+        grid-area: body;
+        text-align: center;
+        
+        & > * + * {
+            margin-top: 2.5em;
+        }
+
+        & .body-heading {
+            max-width: 300px;
+
+            & .body-title, 
+            .body-subtitle {
+                margin: 0;
+            }
+
+            & .body-subtitle {
+                font-weight: $thin;
+            }
+        }
+
+        & .body-social {
+            & > * + * {
+                margin-left: 2.5em
+          
+            }  
+
+            & .social-link {
+                color: $dark-blue;
+                font-size: 2rem;
+            
+                &:hover {
+                    color: $mild-blue;
+                }
+            }
+        }
+    }
+
+    &__img {
+        min-width: 300px;
+        margin: 1.75rem;
+        grid-area: img;
+
+        // & img {
+        //     border-radius: 10px;
+        // }
+    }
+
+}
+
+
+@media (min-width: 1050px) {
+    .card-horizontal {
+        outline: solid 2px $dark-blue;
+        max-width: 1000px; 
+        padding: 4.5rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        &:hover {
+            box-shadow: $card;
+            outline: none;
+        }
+
+        &__img {
+            margin-left: 3.5rem;
+        }
+    }
+}
+
+
+
+

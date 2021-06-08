@@ -1,0 +1,35 @@
+// styles for card stacks:
+//      - jobs-list component
+//      - job horizontal cards
+@import '../abstracts/variables';
+@import '../base/base';
+
+.stack {
+    //border: solid 2px red;
+    min-height: 20vh;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    justify-items: center;
+    
+    & > * + * {
+        margin: 2.5em 0 0 0;
+    }  
+
+    @media (min-width: 650px) {
+        & > * + * {
+            margin: 0;
+        }
+        
+        & > * {
+            margin: 2.5em;
+        }
+    }
+}
+
+.stack-horizontal {
+    margin: 0 1.25em;
+}
+
+// .loading {
+//     font-size: $h2;
+// }

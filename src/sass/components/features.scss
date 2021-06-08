@@ -1,0 +1,32 @@
+@import "../abstracts/mixins";
+@import "../abstracts/variables";
+
+.features {
+  margin-bottom: 8em;
+
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin: 0 1.25em;
+    max-width: 1200px;
+
+    @media (min-width: 650px) {
+      margin: 0 auto;
+    }
+
+    @include h2-landing;
+
+    .feature-cards {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+    }
+  }
+}
+
+@media (min-width: 650px) {
+  .features .feature-cards {
+    flex-direction: row;
+  }
+}

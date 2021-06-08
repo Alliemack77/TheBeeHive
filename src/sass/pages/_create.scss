@@ -1,0 +1,67 @@
+// styles for jobs/create page
+
+@import '../abstracts/variables';
+@import '../base/base';
+
+.create {
+    //border: solid red 2px;
+    max-width: 1200px;
+    margin: 8em auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    // & .button-group {
+    //     align-self: flex-start;
+    //     margin: 4em 0em 4.5em 3em;
+    // }
+    
+
+    &__inner {
+        //border: solid 2px green;
+        margin: 2.5em 1.25em;
+        // display: grid;
+        // grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+
+
+        & > * {
+            &:not(:first-child) {
+                margin-top: 2.5em;
+            }
+        }
+
+
+        @media (min-width: 56.25em) {
+            display: flex;
+            max-width: 1200px;
+            margin: 0 auto;
+
+            & > * {
+                &:not(:first-child) {
+                    margin-left: 2.5em;
+                }
+            }
+        }
+
+        & .inner-form {
+           flex: 0 0 450px;
+           display: flex;
+           justify-content: center;
+
+           & > * {
+               flex: 0 0 450px;
+           }
+        }
+
+        
+        & .inner-stack {
+            //flex: 1;
+        
+            & .loading {
+                text-align: center; 
+                font-size: $h2;
+            }
+            
+        }
+    } 
+}

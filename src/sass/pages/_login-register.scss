@@ -1,0 +1,93 @@
+@import "../abstracts/variables";
+
+.login {
+  //border: solid red 2px;
+  max-width: 900px;
+  margin: 8em 1.25em;
+  display: flex;
+  flex-direction: column;
+
+  & .bold {
+    font-weight: $bold;
+  }
+
+  & .thin {
+    font-weight: $thin;
+  }
+
+  &__header {
+    text-align: center;
+    font-weight: $thin;
+
+    
+  }
+
+  &__body {
+    //border: solid 2px green;
+    width: 75%;
+    margin: 0 auto;
+    //display: flex;
+    //flex-direction: column;
+    //justify-content: center;
+    //align-items: center;
+    //max-width: 50vw;
+    //margin: 0;
+  }
+
+  & .cta {
+    //border: solid 2px purple;
+    text-align: center;
+    margin: 2.5em 0em 0em 0em;
+
+    & > *{
+      margin: 0;
+    }
+  }
+
+  & form {
+    //border: solid 2px purple;
+    margin: 0 auto;
+    
+  }
+
+  &__footer {
+    //border: solid 2px purple;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 1.2rem;
+    margin-top: 3em;
+    
+    & p {
+      margin: 0;
+    }
+
+    & .login-link.bold {
+      font-weight: $bold;
+
+    }
+  }
+
+  &-link:link, 
+  &-link:visited, 
+  &-link:active {
+    color: $dark-blue;
+    text-decoration: none;
+  }
+  &-link:hover,
+  &-link:focus {
+    color: $light-blue;
+  }
+
+}
+.regMentor {
+  text-align: center;
+}
+
+@media (min-width: 650px) {
+  .login {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+}

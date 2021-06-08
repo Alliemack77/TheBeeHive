@@ -1,0 +1,71 @@
+@import '../abstracts/variables';
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400&display=swap');
+
+
+.btn{
+  font-family: inherit;
+  color: $white;
+  background: $dark-blue;
+  border-radius: 10px;
+  border: solid 2px $dark-blue;
+  padding: .50em 1.25em;
+  min-width: 12ch;
+  font-size: 1rem;
+  cursor: pointer;
+
+  &:hover, 
+  &:focus,
+  &:active,
+  &:disabled{
+      color: $dark-blue;
+      background: $white;  
+  }
+
+  &:disabled {
+    cursor: not-allowed;
+  }
+}
+
+.outline {
+  color: $dark-blue;
+  background: $white;
+ 
+  &:hover, 
+  &:focus,
+  &:disabled {
+      color: $white;
+      background: $dark-blue;
+  }
+
+  &:disabled {
+    cursor: not-allowed;
+  }
+}
+
+
+.outline-white {
+  border: solid $white 1px;
+
+  &:hover,
+  &:focus {
+      font-weight: 700;
+  }
+}
+
+.btn.red {
+  border: solid 2px $red;
+  color: $white;
+  background-color: $red;
+
+  &:hover, 
+  &:focus {
+    color: $red;
+    background: $white;
+
+  }
+}
+
+.btn.grey {
+  background: #092c4878;
+  color: $dark-blue
+}

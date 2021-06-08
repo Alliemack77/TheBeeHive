@@ -1,0 +1,37 @@
+@import "../abstracts/mixins";
+@import "../abstracts/variables";
+
+.program {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 8em 0;
+
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: $max-width;
+
+    @include h2-landing;
+
+
+    p {
+      margin: 2em 0 3em;
+      font-size: 1.5rem;
+      text-align: center;
+    }
+    
+    .program-btns {
+      display: flex;
+      justify-content: space-around;
+      margin: 1em 0;
+      width: 40%;
+
+      .btn {
+        margin: 0 1em;
+      }
+    }
+  }
+}

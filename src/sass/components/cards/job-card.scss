@@ -1,0 +1,69 @@
+@import '../../abstracts/variables';
+@import '../../base/base';
+
+
+
+.job-card {
+    outline: 1px solid rgba(9, 44, 72, 0.5);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    //border-radius: 10px;
+    max-width: 325px;
+    height: 450px;
+    padding: .5em 1.5em;
+    //margin: 2em;
+
+    &:hover {
+        box-shadow: $card;
+        outline: none;
+    }
+    
+    &__header {
+        // border: solid 2px red;
+        display: flex;
+        justify-content: space-between;
+
+        & .header-icons {
+            display: flex;
+            align-items: center;
+        }
+
+        & .header-icon{
+            font-size: 3.75rem;
+            //border: solid purple 2px;
+            color: $dark-blue;
+        }
+
+        .ion-icon {
+            font-size: 2.5rem;
+        }
+    }
+
+    &__body {
+        //min-width: 250px;
+
+        & > * + * {
+            margin: 1.5em 0 0 0;
+        }
+
+        & .body-title {
+            line-height: 1.2;
+        }
+
+        & .body-subtitle {
+            font-weight: $thin;
+            margin: 0;
+        }
+
+        & .body-subtitle span {
+            font-weight: $bold;
+        }
+    }
+}
+
+
+.btn-save {
+    font-size: 2.75rem;
+}
+

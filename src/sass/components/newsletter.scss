@@ -1,0 +1,63 @@
+@import "../abstracts/variables";
+
+$fixedHeight: 480px;
+$fixedWidth: 50vw;
+
+.newsletter {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 10em 5em 5em;
+
+  &__card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: $fixedWidth;
+    min-height: 300px;
+    padding: 0 50px;
+    border: 3px solid $dark-blue;
+    background-color: $white;
+    border-radius: 10px 10px 0 0;
+
+    span {
+      display: block;
+      font-size: 2em;
+      font-weight: $bold;
+      font-style: italic;
+    }
+  }
+
+  &__signup {
+    max-width: $fixedWidth;
+    padding: 2.75em;
+    background-color: $grey;
+    border-radius: 0 0 10px 10px;
+
+    form {
+      text-align: center;
+      margin: 0;
+      padding: 0;
+    }
+
+  }
+}
+
+@media (min-width: 650px) {
+  .newsletter {
+    &__card {
+      border-radius: 10px 0 0 10px;
+      height: $fixedHeight;
+      width: 400px;
+      max-width: 30vw;
+    }
+
+    &__signup {
+      border-radius: 0px 10px 10px 0;
+      height: $fixedHeight;
+      width: 400px;
+      max-width: 30vw;
+    }
+  }
+}

@@ -1,0 +1,85 @@
+// styles for /jobs and /jobs/saved page
+
+@import '../abstracts/variables';
+@import '../base/base';
+
+
+// all jobs list
+.jobs {
+    margin: 8em auto;
+
+    &__content{
+        
+        max-width: 1200px;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+
+        & > * {
+            &:not(:first-child) {
+                margin-top: 2.5rem;
+            }
+        } 
+    }
+
+    & .jobs-btn {
+        padding-left: 1.75em;
+        display: flex;
+        flex-direction: column;
+        //border: solid red 2px;
+        //text-align: center;
+        //width: 65%;
+
+        & > * {
+            &:not(:first-child) {
+                margin: 2em 0em 0em 0em;
+            }
+        }
+
+        @media (min-width:650px) {
+            flex-direction: row;
+            
+            & > * {
+                &:not(:first-child) {
+                    margin: 0em 0em 0em 2em;
+                }
+            }
+
+        }
+    }
+
+    & .jobs-search {
+        padding: 0 1.75em;
+        //border: solid red 2px;
+
+    }
+
+    & .jobs-list .jobs-title{
+        text-align: center;
+        font-size: $h2;
+    }
+}
+
+
+// saved jobs list
+.jobs.saved {
+    //border: solid red 2px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 1200px;
+    min-height: 50vh;
+    
+
+    & > * {
+        &:not(:first-child) {
+            margin-top: 5.5em;
+        }
+    }
+
+    & .jobs-saved-btn {
+        padding:0 5.25em;
+        align-self: center;
+    }
+}
+

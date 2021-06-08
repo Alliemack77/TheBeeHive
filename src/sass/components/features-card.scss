@@ -1,0 +1,33 @@
+@import "../abstracts/variables";
+
+.feature-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 3em;
+  padding: 1em;
+
+  * {
+    margin: 10px;
+  }
+
+  .icon {
+    font-size: 3rem;
+    color: $dark-blue;
+  }
+
+  h3 {
+    margin: 0;
+  }
+
+  p {
+    text-align: center;
+  }
+}
+
+@media (min-width: 650px) {
+  .feature-card {
+    max-width: 20vw;
+  }
+}

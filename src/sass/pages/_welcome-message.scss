@@ -1,0 +1,10 @@
+
+.welcome-message, 
+.event-message {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 60vh;
+    text-align: center;
+}

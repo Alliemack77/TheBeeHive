@@ -1,0 +1,66 @@
+// styles for horizontal cards:
+//      - saved jobs 
+//      - crud jobs
+@import '../../abstracts/variables';
+@import '../../base/base';
+
+.job-horizontal,
+.crud-horizontal, 
+.event-horizontal {
+    //border: solid 2px red;
+    border-bottom: solid $dark-blue 3px;
+    padding: 2.5em 3.5em;
+    margin: 0 auto;
+    max-width: 1200px;
+    min-width: 400px;
+    display: flex;
+    flex-direction: column;
+
+    @media (max-width: 650px) {
+        .crud-horizontal {
+            border-bottom: none;
+        }
+    }
+
+    &:hover {
+        box-shadow: $card-horizontal;
+        border: none;
+    }
+    
+    & > * + * {
+        margin-top: 2.5em;
+    }
+
+
+    &__body {
+        // border: solid 2px green;
+        max-width: 90%;
+
+        & > * + * {
+            margin: 1.5em 0 0 0 ;
+        }
+
+        & .body-title, 
+        .body-subtitle {
+            margin: 0;
+            padding: 0;
+        }
+
+        & .body-subtitle {
+            font-weight: $thin;
+        }
+
+        & .body-subtitle span {
+            font-weight: $bold;
+        }
+    }
+
+    &__btns {
+        & > * {
+            &:not(:first-child) {
+                margin-left: 2.5em
+            }
+        }
+        
+    }
+}

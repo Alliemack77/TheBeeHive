@@ -1,0 +1,90 @@
+@import "../abstracts/_variables";
+@import "../base/base";
+
+footer {
+  display: flex;
+  justify-content: center;
+  padding: 5.5rem 0; 
+  background-color: $dark-blue;
+  width: 100%;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: space-between; 
+  margin: 0 1.25em;
+  max-width: 1400px;
+  color:$white;
+}
+
+.footer__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 30%;
+  min-width: 300px;
+
+  & h1 {
+    margin: 0;
+  }
+}
+
+.nav-list__footer{
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.footer__link{
+  text-decoration: none;
+  color: $white;
+
+    &:hover, 
+    &:focus {
+      color: $mild-blue;
+    }
+}
+
+.nav-split__footer{
+  list-style: none;
+
+}
+
+.social{
+  display: flex;
+  color:$white;
+  padding-top: 1em;
+  font-size: $icon;
+
+  & > * + * {
+    margin-left: 2rem;
+  }
+
+  &__link {
+    color:$white;
+  }
+
+  &__link:hover {
+    color: $mild-blue;
+  }
+}
+
+
+@media (max-width: 800px) {
+  .wrapper {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .footer__container {
+    width: 50%;
+    text-align: center;
+  }
+  
+  .footer__container + * {
+    margin-top: 3.5rem;
+  }
+
+  .social{
+    justify-content:center;
+  }
+}

@@ -1,0 +1,35 @@
+// styles for /blog and /blog single post page
+@import '../abstracts/variables';
+@import '../base/base';
+
+
+.blog{
+    margin: 8em 1.2em;
+      
+    &__inner {
+        margin: 0 auto;
+        max-width: 1200px;
+        display: flex;
+        flex-direction: column; 
+        align-content: center;
+        
+        & button {
+            margin: 2.5em;
+        }
+
+        & > * {
+            &:not(:first-child) {
+                margin-top: 2.5em;
+            }
+        }
+    } 
+
+    
+    .blog-body{
+        margin: 0 auto;
+        text-align: center;
+        max-width:  900px;
+    }
+
+    
+}  
